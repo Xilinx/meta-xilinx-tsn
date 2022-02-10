@@ -1,7 +1,5 @@
 DESCRIPTION = "TSN related packages"
 
-PACKAGE_ARCH:k26 = "k26"
-
 inherit packagegroup
 
 TSN_PACKAGES = " \
