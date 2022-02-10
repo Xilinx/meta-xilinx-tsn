@@ -7,7 +7,6 @@ TSN_PACKAGES = " \
 	linuxptp \
 	lldpd \
 	misc-utils \
-	packeth \	
 	"
 
 RDEPENDS:${PN} = "${TSN_PACKAGES}"
