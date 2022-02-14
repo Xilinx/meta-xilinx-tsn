@@ -3,7 +3,7 @@ DESCRIPTION = "TSN related packages"
 inherit packagegroup
 
 TSN_PACKAGES = " \
-	gptp \
+	openavb \
 	linuxptp \
 	lldpd \
 	misc-utils \
