@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI ="git://gitenterprise.xilinx.com/ckalluri/tsn-packages.git;branch=${BRANCH};protocol=https"
 BRANCH="main"
 
-SRCREV="${AUTOREV}"
+SRCREV="4ea10b4fe427f765375cb2323a26c03712a8e431"
 
 S = "${WORKDIR}/git/misc-utils"
 
