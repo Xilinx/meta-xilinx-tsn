@@ -7,6 +7,7 @@ TSN_PACKAGES = " \
 	linuxptp \
 	lldpd \
 	tsn-utils \
+	vlan \
 	"
 
 RDEPENDS:${PN} = "${TSN_PACKAGES}"
