@@ -6,7 +6,7 @@ TSN_PACKAGES = " \
 	openavb \
 	linuxptp \
 	lldpd \
-	misc-utils \
+	tsn-utils \
 	"
 
 RDEPENDS:${PN} = "${TSN_PACKAGES}"
