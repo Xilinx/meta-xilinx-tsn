@@ -10,7 +10,7 @@ SRCREV="0baef8a36a13105112862919aac0f1eed21a44ea"
 
 inherit cmake pkgconfig
 
-DEPENDS = "cmake-native"
+DEPENDS = "cmake-native doxygen-native"
 
 S = "${WORKDIR}/git"
 
