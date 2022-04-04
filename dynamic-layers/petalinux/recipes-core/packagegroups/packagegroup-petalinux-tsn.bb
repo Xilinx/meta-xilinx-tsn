@@ -3,9 +3,10 @@ DESCRIPTION = "TSN related packages"
 inherit packagegroup
 
 TSN_PACKAGES = " \
-	openavb \
+	gptp \
 	linuxptp \
 	lldpd \
+	tsn-examples \
 	tsn-utils \
 	vlan \
 	"
