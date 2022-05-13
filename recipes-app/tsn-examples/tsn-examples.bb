@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = " \
 
 BRANCH = "main"
 SRC_URI = " \
-	gitsm://gitenterprise.xilinx.com/Linux/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
+	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
 	file://0001-openavb_tasks-Add-missing-include-file.patch \
 "
 SRCREV = "8aee028a7be885679c04a954d0656a1b3d640a60"
