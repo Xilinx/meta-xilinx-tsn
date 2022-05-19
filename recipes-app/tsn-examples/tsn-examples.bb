@@ -10,16 +10,10 @@ SRC_URI = " \
 	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
 	file://0001-openavb_tasks-Add-missing-include-file.patch \
 "
-SRCREV = "8aee028a7be885679c04a954d0656a1b3d640a60"
+SRCREV = "75e9e55a3d10c59283844f1f9fb0454ed8c64867"
 
 S = "${WORKDIR}/git"
 
-TARGET_CC_ARCH += "${LDFLAGS}"
+inherit autotools-brokensep
 
 do_configure[noexec] = '1'
-
-do_install () {
- 	install -d ${D}${sbindir}
-	install -m 755 ${S}/tsn_talker/tsn_talker ${D}${sbindir}
-	install -m 755 ${S}/tsn_listener/tsn_listener ${D}${sbindir}
-}
