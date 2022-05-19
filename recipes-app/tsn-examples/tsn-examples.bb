@@ -1,7 +1,7 @@
 DESCRIPTION = "TSN talker listner examples"
-LICENSE = "MIT & BSD & GPLv2"
+LICENSE = "LGPL-2.1 & BSD & GPLv2"
 LIC_FILES_CHKSUM = " \
-	file://LICENSE.md;md5=d4726d3931414cd9c75119a96a1151da \
+	file://LICENSE.md;md5=1750b1f4467832c066d5199bae61de06 \
 	file://OpenAvnu/README.rst;beginline=41;endline=58;md5=421b581669f30d492238ab13a0b86cbd \
 "
 
