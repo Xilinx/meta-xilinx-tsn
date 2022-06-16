@@ -1,16 +1,16 @@
 DESCRIPTION = "TSN talker listner examples"
-LICENSE = "LGPL-2.1 & BSD & GPLv2"
+LICENSE = "LGPL-2.1 & BSD & GPLv2 & MIT"
 LIC_FILES_CHKSUM = " \
-	file://LICENSE.md;md5=1750b1f4467832c066d5199bae61de06 \
+	file://LICENSE.md;md5=6add0857cdd1d555be070a9b1bca8b9b \
 	file://OpenAvnu/README.rst;beginline=41;endline=58;md5=421b581669f30d492238ab13a0b86cbd \
 "
 
-BRANCH = "main"
+BRANCH = "xlnx_rel_v2022.1"
 SRC_URI = " \
 	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
 	file://0001-openavb_tasks-Add-missing-include-file.patch \
 "
-SRCREV = "75e9e55a3d10c59283844f1f9fb0454ed8c64867"
+SRCREV = "5959b0819c0ed72444b78984d2f98077c45d54f3"
 
 S = "${WORKDIR}/git"
 
