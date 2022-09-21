@@ -13,12 +13,11 @@ DEPENDS = "cmake-native doxygen-native"
 
 S = "${WORKDIR}/git"
 
-do_configure () {
-	rm -rf ${S}/build
-}
-
+do_compile[dirs] =+ "${S}/build ${S}/doc/build"
+do_compile[cleandirs] =+ "${S}/build ${S}/doc/build"
 do_compile () {
         cd ${S}
+        rm -rf ${S}/build ${S}/doc/build
         ./travis.sh
 }
 
