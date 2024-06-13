@@ -1,4 +1,4 @@
-DESCRIPTION = "TSN related packages"
+DESCRIPTION = "TSN packages"
 
 inherit packagegroup
 

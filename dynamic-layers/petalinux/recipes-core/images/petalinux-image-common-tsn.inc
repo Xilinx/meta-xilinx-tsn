@@ -1,2 +1,2 @@
-FEATURE_PACKAGES_petalinux-tsn ?= "packagegroup-petalinux-tsn"
-FEATURE_PACKAGES_petalinux-tsn[optional] ?= "1"
+FEATURE_PACKAGES_tsn ?= "packagegroup-tsn"
+FEATURE_PACKAGES_tsn[optional] ?= "1"
