@@ -5,12 +5,12 @@ LIC_FILES_CHKSUM = " \
 	file://OpenAvnu/README.rst;beginline=41;endline=58;md5=421b581669f30d492238ab13a0b86cbd \
 "
 
-BRANCH = "xlnx_rel_v2024.1"
+BRANCH = "main"
 SRC_URI = " \
 	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
 	file://0001-openavb_tasks-Add-missing-include-file.patch \
 "
-SRCREV = "8a580f0b4dc6c2e71f46bd1389d9f346db4f8db0"
+SRCREV = "b68dc4efb12954623148d60e188d77f85f887acb"
 
 S = "${WORKDIR}/git"
 
