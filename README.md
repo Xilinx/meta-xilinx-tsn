@@ -13,10 +13,10 @@ the [meta-xilinx mailing list](https://lists.yoctoproject.org/g/meta-xilinx):
 When sending patches, please make sure the email subject line includes
 `[meta-xilinx-tsn][<BRANCH_NAME>][PATCH]` and cc'ing the maintainers.
 
-For more details follow the OE community patch submission guidelines, as described in:
+For more details follow the Yocto Project community patch submission guidelines,
+as described in:
 
-https://www.openembedded.org/wiki/Commit_Patch_Message_Guidelines
-https://www.openembedded.org/wiki/How_to_submit_a_patch_to_OpenEmbedded
+https://docs.yoctoproject.org/dev/contributor-guide/submit-changes.html#
 
 `git send-email --to meta-xilinx@lists.yoctoproject.org *.patch`
 
@@ -29,32 +29,37 @@ https://www.openembedded.org/wiki/How_to_submit_a_patch_to_OpenEmbedded
 `git format-patch -s --subject "meta-xilinx-tsn][<BRANCH_NAME>][PATCH" -1`
 
 **Example:**
-`git format-patch -s --subject "meta-xilinx-tsn][rel-v2023.1][PATCH" -1`
+`git format-patch -s --subject "meta-xilinx-tsn][rel-v2024.2][PATCH" -1`
 
 **Maintainers:**
 
 	Mark Hatle <mark.hatle@amd.com>
 	Sandeep Gundlupet Raju <sandeep.gundlupet-raju@amd.com>
 	John Toomey <john.toomey@amd.com>
----
+	Trevor Woerner <trevor.woerner@amd.com>
+
 ## Dependencies
 
 This layer depends on:
 
 	URI: https://git.yoctoproject.org/poky
 	layers: meta, meta-poky
-	branch: langdale
+	branch: scarthgap
 
 	URI: https://git.openembedded.org/meta-openembedded
 	layers: meta-oe, meta-perl, meta-python, meta-filesystems, meta-gnome,
             meta-multimedia, meta-networking, meta-webserver, meta-xfce,
             meta-initramfs.
-	branch: langdale
+	branch: scarthgap
 
 	URI:
         https://git.yoctoproject.org/meta-xilinx (official version)
-        https://github.com/Xilinx/meta-xilinx (development and amd xilinx release)
+        https://github.com/Xilinx/meta-xilinx (development and AMD release)
 	layers: meta-xilinx-core, meta-xilinx-microblaze, meta-xilinx-bsp,
-            meta-xilinx-standalone, meta-xilinx-vendor.
-	branch: langdale or amd xilinx release version (e.g. rel-v2023.1)
+            meta-xilinx-standalone.
+	branch: scarthgap or AMD release version (e.g. rel-v2023.1)
+
+	URI: https://git.yoctoproject.org/meta-arm
+	layers: meta-arm, meta-arm-toolchain
+	branch: scarthgap
 
