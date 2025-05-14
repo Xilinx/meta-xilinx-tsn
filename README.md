@@ -29,7 +29,7 @@ https://docs.yoctoproject.org/dev/contributor-guide/submit-changes.html#
 `git format-patch -s --subject "meta-xilinx-tsn][<BRANCH_NAME>][PATCH" -1`
 
 **Example:**
-`git format-patch -s --subject "meta-xilinx-tsn][rel-v2024.2][PATCH" -1`
+`git format-patch -s --subject "meta-xilinx-tsn][rel-v2025.1][PATCH" -1`
 
 **Maintainers:**
 
@@ -57,7 +57,7 @@ This layer depends on:
         https://github.com/Xilinx/meta-xilinx (development and AMD release)
 	layers: meta-xilinx-core, meta-xilinx-microblaze, meta-xilinx-bsp,
             meta-xilinx-standalone.
-	branch: scarthgap or AMD release version (e.g. rel-v2023.1)
+	branch: scarthgap or AMD release version (e.g. rel-v2025.1)
 
 	URI: https://git.yoctoproject.org/meta-arm
 	layers: meta-arm, meta-arm-toolchain
