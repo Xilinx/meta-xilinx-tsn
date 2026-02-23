@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=44e6f1bcc9f4ca675262918839e8663a"
 
 BRANCH = "main"
 SRC_URI = "git://github.com/Xilinx/tsn-utils.git;branch=${BRANCH};protocol=https"
-SRCREV = "31eda804ace1aa896ce408124caed7ee6433532c"
+SRCREV = "5e3f757872a60973e38eb3374f08e81b2b708c9b"
 
 S = "${WORKDIR}/git"
 
