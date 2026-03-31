@@ -1,0 +1,2 @@
+define KFEATURE_DESCRIPTION "TSN traffic scheduling support"
+kconf non-hardware tsn-extra.cfg
