@@ -1,3 +1,6 @@
+SUMMARY = "Talker/listener example applications demonstrating \
+Time-Sensitive Networking (TSN) traffic flows on AMD Xilinx TSN \
+endpoints."
 DESCRIPTION = "TSN talker listner examples"
 LICENSE = "LGPL-2.1-only & BSD-3-Clause & GPL-2.0-only & MIT"
 LIC_FILES_CHKSUM = " \

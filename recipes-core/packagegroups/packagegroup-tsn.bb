@@ -1,3 +1,6 @@
+SUMMARY = "Packagegroup pulling in the AMD Xilinx Time-Sensitive \
+Networking (TSN) runtime - gPTP, tsn-utils, tsn-examples and \
+supporting tools."
 DESCRIPTION = "TSN packages"
 
 inherit packagegroup

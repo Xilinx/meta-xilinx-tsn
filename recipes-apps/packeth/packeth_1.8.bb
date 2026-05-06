@@ -1,4 +1,7 @@
-DESCRIPTION = "packETH is a Linux GUI packet generator tool for ethernet"
+SUMMARY = "packETH: Linux GUI/CLI Ethernet packet generator used to \
+test TSN traffic on AMD Xilinx TSN endpoints."
+DESCRIPTION = "packETH is a Linux GUI packet generator tool for \
+ethernet"
 SECTION = "packeth"
 LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"

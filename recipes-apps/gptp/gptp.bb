@@ -1,3 +1,5 @@
+SUMMARY = "User-space gPTP (generalised Precision Time Protocol, IEEE \
+802.1AS) utilities for AMD Xilinx TSN endpoints."
 DESCRIPTION = "TSN user space gptp utilities"
 SECTION = "gptp"
 LICENSE = "BSD-3-Clause"

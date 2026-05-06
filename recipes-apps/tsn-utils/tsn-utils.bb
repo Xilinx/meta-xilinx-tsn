@@ -1,3 +1,5 @@
+SUMMARY = "User-space miscellaneous utilities for configuring and \
+introspecting AMD Xilinx Time-Sensitive Networking (TSN) endpoints."
 DESCRIPTION = "TSN user space miscellaneous utilities"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=44e6f1bcc9f4ca675262918839e8663a"
