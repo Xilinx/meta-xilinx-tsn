@@ -8,9 +8,16 @@ BRANCH = "main"
 SRC_URI = "git://github.com/Xilinx/tsn-utils.git;branch=${BRANCH};protocol=https"
 SRCREV = "5e3f757872a60973e38eb3374f08e81b2b708c9b"
 
-S = "${WORKDIR}/git"
-
-inherit autotools-brokensep
+# Fix missing declaration
+SRC_URI += " \
+	file://0001-tsn-apps-br_progs-Fix-implicit-declaration-of-close.patch \
+	file://0001-pcp_prog-pcp_prog.c-Fix-FD-definition.patch \
+	file://0001-ptptime-ptptime.c-Add-missing-declarations-and-fix-r.patch \
+	"
 
 DEPENDS = "libconfig"
 RDEPENDS:${PN} += "python3-libconf bash"
+
+do_install() {
+        oe_runmake install DESTDIR=${D}
+}

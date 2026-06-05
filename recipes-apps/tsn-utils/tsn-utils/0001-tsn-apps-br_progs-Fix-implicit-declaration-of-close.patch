@@ -1,0 +1,34 @@
+From 77b7e3e13733e3aeed089eb1626be9de721394bd Mon Sep 17 00:00:00 2001
+From: Mark Hatle <mark.hatle@amd.com>
+Date: Thu, 4 Jun 2026 18:07:15 -0600
+Subject: [PATCH] tsn-apps/br_progs: Fix implicit declaration of close
+
+| br_prog.c: In function 'main':
+| br_prog.c:358:9: error: implicit declaration of function 'close'; did you mean 'pclose'? [-Wimplicit-function-declaration]
+|   358 |         close(fd);
+|       |         ^~~~~
+
+The issue appears to be a missing #include for unistd.h
+
+Upstream-Status: Pending
+
+Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+---
+ tsn-apps/br_prog/br_prog.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tsn-apps/br_prog/br_prog.c b/tsn-apps/br_prog/br_prog.c
+index 15ed70c..56f24ed 100644
+--- a/tsn-apps/br_prog/br_prog.c
++++ b/tsn-apps/br_prog/br_prog.c
+@@ -12,6 +12,7 @@
+ #include <string.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#include <unistd.h>
+ 
+ typedef  unsigned long long uint64_t;
+ typedef  unsigned int uint32_t;
+-- 
+2.34.1
+

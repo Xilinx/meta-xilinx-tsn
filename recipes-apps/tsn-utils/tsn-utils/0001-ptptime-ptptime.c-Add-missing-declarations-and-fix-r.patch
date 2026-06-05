@@ -1,0 +1,41 @@
+From f2fee4f4e5489afd187276bd26cd94f2d989114d Mon Sep 17 00:00:00 2001
+From: Mark Hatle <mark.hatle@amd.com>
+Date: Thu, 4 Jun 2026 18:23:45 -0600
+Subject: [PATCH] ptptime/ptptime.c: Add missing declarations and fix return
+
+Fix for missing close, clock_gettime and usleep.
+
+Also fix the return of usage(), it's declared void so can not return a
+value.
+
+Upstream-Status: Pending
+
+Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+---
+ tsn-apps/ptptime/ptptime.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/tsn-apps/ptptime/ptptime.c b/tsn-apps/ptptime/ptptime.c
+index 9d11259..ffd1020 100755
+--- a/tsn-apps/ptptime/ptptime.c
++++ b/tsn-apps/ptptime/ptptime.c
+@@ -14,6 +14,8 @@
+ #include <linux/if.h>
+ #include <linux/in.h>
+ #include <string.h>
++#include <unistd.h>
++#include <time.h>
+ 
+ static clockid_t get_clockid(int fd)
+ {
+@@ -69,7 +71,6 @@ int ptp_open(char *ifname)
+ 
+ void usage(){
+ 	printf("ptptime <interface name>\n");
+-	return 0;
+ }
+ 
+ int main(int argc, char **argv)
+-- 
+2.34.1
+

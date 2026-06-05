@@ -1,0 +1,45 @@
+From dadb4dc36242452ba003f6fa60821be8a390aa1a Mon Sep 17 00:00:00 2001
+From: Mark Hatle <mark.hatle@amd.com>
+Date: Thu, 4 Jun 2026 18:16:48 -0600
+Subject: [PATCH] pcp_prog/pcp_prog.c: Fix FD definition
+
+fd, per the the open and ioctl man pages, is an int.  Fix the defintion.
+
+Fixes:
+
+| pcp_prog.c: In function 'set_pcp':
+| pcp_prog.c:106:20: error: assignment to 'FILE *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+|   106 |                 fd = open("/dev/switch", O_RDWR);       /* Driver open */
+|       |                    ^
+| pcp_prog.c:107:24: warning: comparison between pointer and integer
+|   107 |                 if (fd == -1) {
+|       |                        ^~
+| pcp_prog.c:111:31: error: passing argument 1 of 'ioctl' makes integer from pointer without a cast [-Wint-conversion]
+|   111 |                 if (0 > ioctl(fd, SET_PMAP_CONFIG, &pri_info)) {
+|       |                               ^~
+|       |                               |
+|       |                               FILE *
+
+Upstream-Status: Pending
+
+Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+---
+ tsn-apps/pcp_prog/pcp_prog.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tsn-apps/pcp_prog/pcp_prog.c b/tsn-apps/pcp_prog/pcp_prog.c
+index 72ebae0..9927b2a 100644
+--- a/tsn-apps/pcp_prog/pcp_prog.c
++++ b/tsn-apps/pcp_prog/pcp_prog.c
+@@ -42,7 +42,7 @@ int set_pcp(int argc, char *argv[]){
+ 	FILE *fp_st;
+ 	FILE *fp_res;
+ 	FILE *fp_cfg;
+-	FILE *fd;
++	int fd;
+ 
+ 	st_pcp_str[0] = '\0';
+ 	res_pcp_str[0] = '\0';
+-- 
+2.34.1
+

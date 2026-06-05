@@ -1,0 +1,36 @@
+From 646d3b39a31f6efb17dc1b899c7ef0492029b272 Mon Sep 17 00:00:00 2001
+From: Mark Hatle <mark.hatle@amd.com>
+Date: Thu, 4 Jun 2026 18:28:18 -0600
+Subject: [PATCH] qbv_sched/qbv_sched.c: Add missing declarations for
+ clock_gettime
+
+Fix for:
+| qbv_sched.c: In function 'set_schedule':
+| qbv_sched.c:111:17: error: implicit declaration of function 'clock_gettime'; did you mean 'SYS_clock_gettime'? [-Wimplicit-function-declaration]
+|   111 |                 clock_gettime(clkid, &tmx);
+|       |                 ^~~~~~~~~~~~~
+|       |                 SYS_clock_gettime
+
+
+Upstream-Status: Pending
+
+Signed-off-by: Mark Hatle <mark.hatle@amd.com>
+---
+ tsn-apps/qbv_sched/qbv_sched.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tsn-apps/qbv_sched/qbv_sched.c b/tsn-apps/qbv_sched/qbv_sched.c
+index 9eedfcd..e6ef5e8 100644
+--- a/tsn-apps/qbv_sched/qbv_sched.c
++++ b/tsn-apps/qbv_sched/qbv_sched.c
+@@ -16,6 +16,7 @@
+ #include <sys/ioctl.h>
+ #include <libconfig.h>
+ #include <errno.h>
++#include <time.h>
+ 
+ typedef  unsigned long long uint64_t;
+ typedef  unsigned int uint32_t;
+-- 
+2.34.1
+
