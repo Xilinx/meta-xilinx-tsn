@@ -12,10 +12,10 @@ BRANCH = "main"
 SRC_URI = " \
 	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
 	file://0001-openavb_tasks-Add-missing-include-file.patch \
+	file://0001-openavb_avb_gptp_h_false.patch \
+	file://0001-openavnu-ring_rawsock.c-Add-missing-poll.h.patch \
 "
 SRCREV = "b68dc4efb12954623148d60e188d77f85f887acb"
-
-S = "${WORKDIR}/git"
 
 inherit autotools-brokensep
 

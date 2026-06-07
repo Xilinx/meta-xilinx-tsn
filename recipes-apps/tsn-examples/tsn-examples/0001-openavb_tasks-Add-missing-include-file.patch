@@ -9,6 +9,8 @@ to avoid the below error:
 ../../lib/avtp_pipeline/platform/Linux/openavb_tasks.h:39:8: error: missing binary operator before token "("
    39 | #elif (PTHREAD_STACK_MIN > 65536)
 
+Upstream-Status: Pending
+
 Signed-off-by: Christian Kohn <christian.kohn@xilinx.com>
 ---
  lib/avtp_pipeline/platform/Linux/openavb_tasks.h | 1 +
