@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "0b9333640bf7c0f31190c6fa348224864bc4603519a441438085177ae4
 
 TARGET_CC_ARCH += "${LDFLAGS}"
 
-S = "${WORKDIR}/packETH-${PV}"
+S = "${UNPACKDIR}/packETH-${PV}"
 
 do_configure[noexec] = '1'
 
