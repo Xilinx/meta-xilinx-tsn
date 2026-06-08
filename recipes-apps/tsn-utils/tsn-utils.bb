@@ -13,6 +13,7 @@ SRC_URI += " \
 	file://0001-tsn-apps-br_progs-Fix-implicit-declaration-of-close.patch \
 	file://0001-pcp_prog-pcp_prog.c-Fix-FD-definition.patch \
 	file://0001-ptptime-ptptime.c-Add-missing-declarations-and-fix-r.patch \
+	file://0001-qbv_sched-qbv_sched.c-Add-missing-declarations-for-c.patch \
 	"
 
 DEPENDS = "libconfig"
