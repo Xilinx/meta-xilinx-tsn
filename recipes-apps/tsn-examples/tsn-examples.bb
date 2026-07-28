@@ -15,7 +15,7 @@ SRC_URI = " \
 	file://0001-openavb_avb_gptp_h_false.patch \
 	file://0001-openavnu-ring_rawsock.c-Add-missing-poll.h.patch \
 "
-SRCREV = "63f998153e482a2edc23b4136714bea25a74c240"
+SRCREV = "b55887eaf939399868c17a2e7f1fb7684a6be980"
 
 inherit autotools-brokensep
 
