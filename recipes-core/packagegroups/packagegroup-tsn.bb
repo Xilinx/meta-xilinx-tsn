@@ -9,6 +9,7 @@ TSN_PACKAGES = " \
 	gptp \
 	linuxptp \
 	lldpd \
+	openlldp \
 	tsn-examples \
 	tsn-utils \
 	vlan \
