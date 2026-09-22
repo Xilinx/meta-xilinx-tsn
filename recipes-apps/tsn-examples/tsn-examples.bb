@@ -11,11 +11,8 @@ LIC_FILES_CHKSUM = " \
 BRANCH = "main"
 SRC_URI = " \
 	gitsm://github.com/Xilinx/tsn-talker-listener.git;branch=${BRANCH};protocol=https \
-	file://0001-openavb_tasks-Add-missing-include-file.patch \
-	file://0001-openavb_avb_gptp_h_false.patch \
-	file://0001-openavnu-ring_rawsock.c-Add-missing-poll.h.patch \
 "
-SRCREV = "04c87d740903944827a7da10fe38d1e258d24580"
+SRCREV = "365113a1bc962e104c69746ebfd47b04bc75a6bf"
 
 inherit autotools-brokensep
 
