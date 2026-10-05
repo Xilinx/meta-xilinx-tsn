@@ -29,7 +29,7 @@ https://docs.yoctoproject.org/dev/contributor-guide/submit-changes.html#
 `git format-patch -s --subject "meta-xilinx-tsn][<BRANCH_NAME>][PATCH" -1`
 
 **Example:**
-`git format-patch -s --subject "meta-xilinx-tsn][rel-v2026.1][PATCH" -1`
+`git format-patch -s --subject "meta-xilinx-tsn][rel-v2026.2][PATCH" -1`
 
 **Maintainers:**
 
@@ -42,24 +42,21 @@ https://docs.yoctoproject.org/dev/contributor-guide/submit-changes.html#
 
 This layer depends on:
 
-	URI: https://git.yoctoproject.org/poky
-	layers: meta, meta-poky
-	branch: scarthgap
+	URI: https://git.openembedded.org/openembedded-core
+	layers: meta
+	branch: wrynose
 
 	URI: https://git.openembedded.org/meta-openembedded
-	layers: meta-oe, meta-perl, meta-python, meta-filesystems, meta-gnome,
-            meta-multimedia, meta-networking, meta-webserver, meta-xfce,
-            meta-initramfs.
-	branch: scarthgap
+	layers: meta-oe, meta-networking.
+	branch: wrynose
 
 	URI:
-        https://git.yoctoproject.org/meta-xilinx (official version)
-        https://github.com/Xilinx/meta-xilinx (development and AMD release)
-	layers: meta-xilinx-core, meta-xilinx-microblaze, meta-xilinx-bsp,
-            meta-xilinx-standalone.
-	branch: scarthgap or AMD release version (e.g. rel-v2026.1)
+	 https://git.yoctoproject.org/meta-xilinx (official version)
+	 https://github.com/Xilinx/meta-xilinx (development and AMD release)
+	layers: meta-xilinx-core
+	branch: wrynose or AMD release version (e.g. rel-v2026.2)
 
 	URI: https://git.yoctoproject.org/meta-arm
 	layers: meta-arm, meta-arm-toolchain
-	branch: scarthgap
+	branch: wrynose
 
