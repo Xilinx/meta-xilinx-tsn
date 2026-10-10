@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=44e6f1bcc9f4ca675262918839e8663a"
 
 BRANCH = "main"
 SRC_URI = "git://github.com/Xilinx/tsn-utils.git;branch=${BRANCH};protocol=https"
-SRCREV = "1db91b04d98927a05f868e6365899b13657e76d5"
+SRCREV = "99d0a861f1556eaa7f4eb8a86180e8167b353ee5"
 
 # Fix missing declaration
 SRC_URI += " \
