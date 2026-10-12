@@ -1,0 +1,36 @@
+From 489c98fb1b469b3539789f52b255f0fe8a9bfa0a Mon Sep 17 00:00:00 2001
+From: Pranavi Somisetty <pranavi.somisetty@amd.com>
+Date: Mon, 20 Jul 2026 23:58:15 -0700
+Subject: [PATCH] lldp_util: use SIOCDEVPRIVATE+15 for Xilinx TSN NIC is_bridge
+ ioctl
+
+The Xilinx TSN NIC exposes its private ioctl at SIOCDEVPRIVATE+15
+rather than the base SIOCDEVPRIVATE that openlldp's is_bridge() check
+uses. Without this offset lldpad's bridge detection fails on the TSN
+interface.
+
+This is specific to the staging Xilinx TSN driver and is expected to be
+dropped once the mainline TSN driver (currently under review) is used.
+
+Upstream-Status: Inappropriate [staging Xilinx TSN driver-specific ioctl offset]
+
+Signed-off-by: Pranavi Somisetty <pranavi.somisetty@amd.com>
+---
+ lldp_util.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lldp_util.c b/lldp_util.c
+index 61fb0bc..8e588fd 100644
+--- a/lldp_util.c
++++ b/lldp_util.c
+@@ -589,7 +589,7 @@ int is_bridge(const char *ifname)
+ 
+ 			ifr.ifr_data = (char *)args;
+ 			STRNCPY_TERMINATED(ifr.ifr_name, ifname, sizeof(ifr.ifr_name));
+-			if (ioctl(fd, SIOCDEVPRIVATE, &ifr) == 0)
++			if (ioctl(fd, SIOCDEVPRIVATE+15, &ifr) == 0)
+ 				rc = 1;
+ 		}
+ 	}
+-- 
+2.34.1
