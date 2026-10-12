@@ -17,7 +17,17 @@ SRC_URI += " \
 	"
 
 DEPENDS = "libconfig"
-RDEPENDS:${PN} += "python3-libconf bash"
+RDEPENDS:${PN} += " \
+    bash \
+    python3-libconf \
+    python3-json \
+    python3-pyyaml \
+    inotify-tools \
+    curl \
+    tftp-hpa-server \
+    devmem2 \
+    freeipmi \
+"
 
 do_install() {
         oe_runmake install DESTDIR=${D}
