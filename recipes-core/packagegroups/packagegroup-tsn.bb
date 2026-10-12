@@ -6,6 +6,7 @@ DESCRIPTION = "TSN packages"
 inherit packagegroup
 
 TSN_PACKAGES = " \
+	ethtool \
 	gptp \
 	linuxptp \
 	lldpd \
