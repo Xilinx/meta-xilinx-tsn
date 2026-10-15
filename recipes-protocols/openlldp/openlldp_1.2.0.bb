@@ -11,9 +11,8 @@ inherit ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'systemd', '', d)}
 
 DEPENDS = "libnl libconfig readline"
 
-SRCREV = "5d96bd0aff4606fad66f6c613b644c82fe8d2445"
-PV .= "+git"
-SRC_URI = "git://github.com/intel/openlldp.git;protocol=https;branch=branch-1.2 \
+SRCREV = "da26ebdc2606619aae4b231a85e5d0cc19a5efee"
+SRC_URI = "git://github.com/intel/openlldp.git;protocol=https;tag=v1.2.0;nobranch=1 \
            file://0001-Fix-musl-libc-build-issue.patch \
            file://0001-autotools-Add-include-path-to-generated-version.h.patch \
            file://0001-autotools-Add-option-to-disable-installation-of-syst.patch \

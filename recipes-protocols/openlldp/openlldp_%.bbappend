@@ -1,4 +1,4 @@
-# The openlldp_1.2 recipe (intel/openlldp branch-1.2) already carries the
+# The openlldp_1.2.0 recipe (intel/openlldp v1.2.0) already carries the
 # 802.3br Additional Ethernet Capabilities TLV (Frame Preemption / MAC
 # Merge) that the TSN frame-preemption bring-up drives via
 # `lldptool -i <if> set-tlv -V addEthCaps ...`, so no source repin is
